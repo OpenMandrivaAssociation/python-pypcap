@@ -9,7 +9,6 @@ Source0:	http://monkey.org/~dugsong/pypcap/pypcap-%{version}.tar.bz2
 Patch0:		pypcap-1.1-lib64.diff
 BuildRequires:	python-devel
 BuildRequires:	libpcap-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Simplified object-oriented Python extension module for libpcap - 
