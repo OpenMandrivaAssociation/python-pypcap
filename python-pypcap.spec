@@ -1,12 +1,13 @@
 Summary:	Simplified object-oriented Python extension module for libpcap
 Name:		python-pypcap
 Version:	1.1
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	BSD
 Group:		Development/Python
 URL:		http://monkey.org/~dugsong/pypcap/
 Source0:	http://monkey.org/~dugsong/pypcap/pypcap-%{version}.tar.bz2
 Patch0:		pypcap-1.1-lib64.diff
+Patch1:     pypcap-1.1-fix_build.diff
 BuildRequires:	python-devel
 BuildRequires:	libpcap-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -21,6 +22,7 @@ Windows.
 
 %setup -q -n pypcap-%{version}
 %patch0 -p0
+%patch1 -p0
 
 %build
 CFLAGS="%{optflags}" python setup.py config
