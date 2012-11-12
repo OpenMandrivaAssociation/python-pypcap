@@ -1,0 +1,11 @@
+--- setup.py	2005-10-17 01:07:03.000000000 +0200
++++ setup.py.oden	2006-03-19 15:33:43.000000000 +0100
+@@ -46,7 +46,7 @@
+                 incdirs = [ os.path.join(d, sd) ]
+                 if os.path.exists(os.path.join(d, sd, 'pcap.h')):
+                     cfg['include_dirs'] = [ os.path.join(d, sd) ]
+-                    for sd in ('lib', ''):
++                    for sd in ('lib', 'lib64', ''):
+                         for lib in (('pcap', 'libpcap.a'),
+                                     ('pcap', 'libpcap.dylib'),
+                                     ('wpcap', 'wpcap.lib')):

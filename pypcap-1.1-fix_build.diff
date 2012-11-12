@@ -1,0 +1,20 @@
+Index: pcap_ex.c
+===================================================================
+--- pcap_ex.c
++++ pcap_ex.c	2009-03-03 13:44:50.000000000 +0100
+@@ -13,13 +13,14 @@
+ # include <unistd.h>
+ #endif
+ 
++#include "config.h"
++
+ #include <pcap.h>
+ #ifdef HAVE_PCAP_INT_H
+ # include <pcap-int.h>
+ #endif
+ #include "pcap_ex.h"
+ 
+-#include "config.h"
+ 
+ /* XXX - hack around older Python versions */
+ #include "patchlevel.h"
